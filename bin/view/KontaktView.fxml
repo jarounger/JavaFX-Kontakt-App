@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KontaktController">
+   <children>
+      <HBox layoutX="-2.0" layoutY="-2.0" prefHeight="703.0" prefWidth="1003.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="699.0" prefWidth="360.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="100.0" prefWidth="356.0" text="Kontakt App">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="vornameTextField" promptText="Vorname" />
+                  <TextField fx:id="nachnameTextField" layoutX="10.0" layoutY="66.0" promptText="Nachname" />
+                  <TextField fx:id="mobileTextField" layoutX="10.0" layoutY="93.0" promptText="Mobile" />
+                  <TextField fx:id="emailTextField" layoutX="10.0" layoutY="120.0" promptText="eMail" />
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="351.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonEvent" text="Hinzufügen" />
+                        <Button fx:id="deleteButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteButtonEvent" text="Löschen" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Datenbank Status" />
+                        <Circle fx:id="datenbankStatus" fill="#ff1f1f" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="40.0" right="40.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="kontaktTableView" prefHeight="703.0" prefWidth="662.0">
+              <columns>
+                <TableColumn fx:id="vornameColumn" prefWidth="140.0" text="Vorname" />
+                <TableColumn fx:id="nachnameColumn" prefWidth="140.0" text="Nachname" />
+                  <TableColumn fx:id="mobileColumn" prefWidth="190.0" text="Mobile" />
+                  <TableColumn fx:id="emailColumn" prefWidth="190.0" text="eMail" />
+              </columns>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TableView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
